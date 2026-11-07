@@ -67,6 +67,6 @@ Each round's full review and the point-by-point response are in the project's `c
 
 ## Data sources and licences
 
-- Hotel Booking Demand — N. António, A. de Almeida, L. Nunes, *Data in Brief* 22 (2019) 41–49, [doi:10.1016/j.dib.2018.11.126](https://doi.org/10.1016/j.dib.2018.11.126); mirrored by [TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/main/data/2020/2020-02-11).
+- Hotel Booking Demand — N. António, A. de Almeida, L. Nunes, *Data in Brief* 22 (2019) 41–49, [doi:10.1016/j.dib.2018.11.126](https://doi.org/10.1016/j.dib.2018.11.126); mirrored on Kaggle as [`jessemostipak/hotel-booking-demand`](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) and by [TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/main/data/2020/2020-02-11) (the copy the notebook downloads).
 - NBA shot-chart detail — stats.nba.com via [shufinskiy/nba_data](https://github.com/shufinskiy/nba_data) (Apache-2.0).
-- Online Retail II — D. Chen, [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/502/online+retail+ii) (CC BY 4.0).
+- Online Retail II — D. Chen, [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/502/online+retail+ii) (CC BY 4.0); mirrored on Kaggle as [`mashlyn/online-retail-ii-uci`](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci).

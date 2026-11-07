@@ -4,7 +4,7 @@
 
 **Goals:** (G1) discover customer segments that each call for a different action; (G2) discover products bought together — and test whether both are *knowledge*: valid, novel, useful and understandable (Fayyad, Piatetsky-Shapiro & Smyth, 1996).
 
-**Data:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii) (CC BY 4.0) — 1,067,371 transaction lines of a UK online giftware retailer, Dec 2009 – Dec 2011 (22,523 lines repeated across the two Excel sheets are counted once). Patterns are mined on Dec 2009 – Nov 2010 and **re-tested on Dec 2010 – Nov 2011**.
+**Data:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii) (CC BY 4.0), also on Kaggle as [`mashlyn/online-retail-ii-uci`](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci) — 1,067,371 transaction lines of a UK online giftware retailer, Dec 2009 – Dec 2011 (22,523 lines repeated across the two Excel sheets are counted once). Patterns are mined on Dec 2009 – Nov 2010 and **re-tested on Dec 2010 – Nov 2011**.
 
 ## KDD steps → what was done
 
