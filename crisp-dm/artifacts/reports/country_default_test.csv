@@ -1,0 +1,6 @@
+market_segment,Canceled,Check-Out,No-Show,bookings
+Corporate,0.952,0.731,0.934,4961
+Direct,0.615,0.435,0.665,12587
+Groups,0.968,0.288,0.973,10639
+Offline TA/TO,0.948,0.243,0.986,19213
+Online TA,0.257,0.183,0.371,56421

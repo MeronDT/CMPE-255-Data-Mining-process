@@ -1,0 +1,5 @@
+,discovery_profile,deployed_profile,discovery_customers,deployed_customers,deployed_median_recency,deployed_median_tenure,labels_agree
+S1,active 85% · frequent 98% · high-spend 96%,active 88% · frequent 97% · high-spend 97%,712,682,8.0,326.0,True
+S2,cooling 60% · repeat 67% · high-spend 55%,cooling 60% · repeat 67% · high-spend 52%,1189,1176,57.0,268.0,True
+S3,active 83% · repeat 63% · mid-spend 57% · new 56%,active 80% · repeat 67% · mid-spend 55% · new 56%,832,784,14.0,73.0,True
+S4,lapsed 70% · one-off 75% · low-spend 74%,lapsed 68% · one-off 77% · low-spend 72%,1497,1608,159.0,196.0,True

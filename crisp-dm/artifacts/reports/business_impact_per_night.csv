@@ -1,0 +1,6 @@
+policy,eur_per_1000_bookings,vs_incumbent,vs_incumbent_ci_low,vs_incumbent_ci_high,mean_abs_error_rooms_per_night,walk_nights_%
+No overbooking,0.0,-13429.3,-14498.4,-12232.4,37.1,0.0
+Incumbent: historical rate x bookings,13429.3,0.0,0.0,0.0,9.4,39.3
+Rule: count Non Refund bookings,4814.0,-8615.3,-9955.1,-7220.2,28.4,0.0
+Model: count flagged bookings (p >= 0.67),11538.1,-1891.2,-3108.3,-683.1,16.1,1.1
+Model: sum of probabilities (expected cancellations),16804.0,3374.7,2445.1,4324.4,4.6,42.7

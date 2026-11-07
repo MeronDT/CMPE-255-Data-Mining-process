@@ -1,51 +1,51 @@
-hotel,lead_time,arrival_date_month,arrival_date_week_number,arrival_date_day_of_month,stays_in_weekend_nights,stays_in_week_nights,adults,children,babies,meal,country,market_segment,distribution_channel,is_repeated_guest,previous_cancellations,previous_bookings_not_canceled,reserved_room_type,deposit_type,days_in_waiting_list,customer_type,adr,total_of_special_requests,arrival_weekday,total_nights,total_guests,has_kids,adr_per_guest,has_agent,agent_id,has_company,room_type_x_hotel
-Resort Hotel,31,April,17,23,1,0,1,0.0,0,HB,PRT,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,74.0,0,Sunday,1,1.0,0,74.0,1,298,0,R_A
-Resort Hotel,240,April,17,23,2,2,2,0.0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,0,Transient,43.2,0,Sunday,4,2.0,0,21.6,1,96,0,R_A
-Resort Hotel,130,April,17,23,2,5,2,0.0,0,BB,PRT,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,62.0,0,Sunday,7,2.0,0,31.0,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,BB,PRT,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,62.0,0,Sunday,7,1.0,0,62.0,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,BB,PRT,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,42.0,0,Sunday,7,1.0,0,42.0,1,273,0,R_A
-Resort Hotel,39,April,17,23,2,5,2,0.0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,0,Contract,40.95,0,Sunday,7,2.0,0,20.475,1,40,0,R_A
-Resort Hotel,201,April,17,23,2,5,2,0.0,0,BB,IRL,Online TA,TA/TO,0,0,0,A,No Deposit,0,Transient,54.0,0,Sunday,7,2.0,0,27.0,1,240,0,R_A
-Resort Hotel,259,April,17,23,4,7,2,0.0,0,BB,NLD,Online TA,TA/TO,0,0,0,A,No Deposit,0,Transient,54.0,2,Sunday,11,2.0,0,27.0,1,240,0,R_A
-Resort Hotel,259,April,17,23,4,7,2,0.0,0,BB,NLD,Online TA,TA/TO,0,0,0,A,No Deposit,0,Transient,54.0,2,Sunday,11,2.0,0,27.0,1,240,0,R_A
-Resort Hotel,78,April,17,23,2,3,2,0.0,0,BB,IRL,Direct,Direct,1,0,1,F,No Deposit,0,Transient,112.0,1,Sunday,5,2.0,0,56.0,1,250,0,R_F
-Resort Hotel,12,April,17,23,2,2,2,0.0,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,0,Contract,45.5,0,Sunday,4,2.0,0,22.75,1,40,0,R_A
-Resort Hotel,6,April,17,23,2,2,2,0.0,0,BB,GBR,Online TA,TA/TO,0,0,0,E,No Deposit,0,Transient,103.36,1,Sunday,4,2.0,0,51.68,1,241,0,R_E
-Resort Hotel,85,April,17,23,2,3,2,0.0,0,FB,GBR,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,0,Contract,90.95,0,Sunday,5,2.0,0,45.475,1,40,0,R_A
-Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,74.0,0,Sunday,6,1.0,0,74.0,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,74.0,0,Sunday,6,1.0,0,74.0,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,95.0,0,Sunday,6,2.0,0,47.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,74.0,0,Sunday,6,1.0,0,74.0,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,74.0,0,Sunday,6,1.0,0,74.0,1,298,0,R_A
-Resort Hotel,185,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,E,No Deposit,154,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_E
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,74.0,0,Sunday,6,1.0,0,74.0,1,298,0,R_A
-Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,93.0,0,Sunday,6,2.0,0,46.5,1,298,0,R_A
-Resort Hotel,185,April,17,23,2,4,2,0.0,0,HB,DEU,Groups,TA/TO,0,0,0,A,No Deposit,154,Transient-Party,46.5,0,Sunday,6,2.0,0,23.25,1,298,0,R_A
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,51.09,0,Sunday,7,1.0,0,51.09,1,273,0,R_A
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,51.37,0,Sunday,7,1.0,0,51.37,1,273,0,R_A
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,49.37,0,Sunday,7,1.0,0,49.37,1,273,0,R_A
-Resort Hotel,317,April,17,23,2,5,2,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,D,No Deposit,64,Transient-Party,78.94,0,Sunday,7,2.0,0,39.47,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,67.37,0,Sunday,7,1.0,0,67.37,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,NLD,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,69.37,0,Sunday,7,1.0,0,69.37,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,PRT,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,69.37,0,Sunday,7,1.0,0,69.37,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,80.94,0,Sunday,7,2.0,0,40.47,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,BRA,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,80.66,0,Sunday,7,2.0,0,40.33,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,51.37,0,Sunday,7,1.0,0,51.37,1,273,0,R_A
-Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,80.94,0,Sunday,7,2.0,0,40.47,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,80.94,0,Sunday,7,2.0,0,40.47,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,78.94,0,Sunday,7,2.0,0,39.47,1,273,0,R_D
-Resort Hotel,317,April,17,23,2,5,2,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,D,No Deposit,64,Transient-Party,78.94,0,Sunday,7,2.0,0,39.47,1,273,0,R_D
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,A,No Deposit,0,Transient-Party,51.37,0,Sunday,7,1.0,0,51.37,1,273,0,R_A
-Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,IRL,Groups,TA/TO,0,0,0,D,No Deposit,0,Transient-Party,67.37,0,Sunday,7,1.0,0,67.37,1,273,0,R_D
-Resort Hotel,317,April,17,23,2,5,2,0.0,0,HB,GBR,Groups,TA/TO,0,0,0,D,No Deposit,64,Transient-Party,80.94,0,Sunday,7,2.0,0,40.47,1,273,0,R_D
-Resort Hotel,94,April,17,23,2,5,2,0.0,0,HB,GBR,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,0,Contract,70.95,0,Sunday,7,2.0,0,35.475,1,40,0,R_A
-Resort Hotel,82,April,17,23,2,5,2,0.0,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,D,No Deposit,0,Contract,52.85,0,Sunday,7,2.0,0,26.425,1,40,0,R_D
+hotel,lead_time,arrival_date_month,arrival_date_week_number,arrival_date_day_of_month,stays_in_weekend_nights,stays_in_week_nights,adults,children,babies,meal,market_segment,distribution_channel,is_repeated_guest,previous_cancellations,previous_bookings_not_canceled,reserved_room_type,deposit_type,agent,company,days_in_waiting_list,customer_type,adr,total_of_special_requests
+Resort Hotel,31,April,17,23,1,0,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,74.0,0
+Resort Hotel,240,April,17,23,2,2,2,0.0,0,BB,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,96.0,,0,Transient,43.2,0
+Resort Hotel,130,April,17,23,2,5,2,0.0,0,BB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,62.0,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,BB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,62.0,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,BB,Groups,TA/TO,0,0,0,A,No Deposit,273.0,,0,Transient-Party,42.0,0
+Resort Hotel,39,April,17,23,2,5,2,0.0,0,BB,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,40.0,,0,Contract,40.95,0
+Resort Hotel,201,April,17,23,2,5,2,0.0,0,BB,Online TA,TA/TO,0,0,0,A,No Deposit,240.0,,0,Transient,54.0,0
+Resort Hotel,259,April,17,23,4,7,2,0.0,0,BB,Online TA,TA/TO,0,0,0,A,No Deposit,240.0,,0,Transient,54.0,2
+Resort Hotel,259,April,17,23,4,7,2,0.0,0,BB,Online TA,TA/TO,0,0,0,A,No Deposit,240.0,,0,Transient,54.0,2
+Resort Hotel,78,April,17,23,2,3,2,0.0,0,BB,Direct,Direct,1,0,1,F,No Deposit,250.0,,0,Transient,112.0,1
+Resort Hotel,12,April,17,23,2,2,2,0.0,0,BB,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,40.0,,0,Contract,45.5,0
+Resort Hotel,6,April,17,23,2,2,2,0.0,0,BB,Online TA,TA/TO,0,0,0,E,No Deposit,241.0,,0,Transient,103.36,1
+Resort Hotel,85,April,17,23,2,3,2,0.0,0,FB,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,40.0,,0,Contract,90.95,0
+Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,74.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,74.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,95.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,74.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,74.0,0
+Resort Hotel,185,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,E,No Deposit,298.0,,154,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,31,April,17,23,2,4,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,74.0,0
+Resort Hotel,31,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,0,Transient-Party,93.0,0
+Resort Hotel,185,April,17,23,2,4,2,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,298.0,,154,Transient-Party,46.5,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,273.0,,0,Transient-Party,51.09,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,273.0,,0,Transient-Party,51.37,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,273.0,,0,Transient-Party,49.37,0
+Resort Hotel,317,April,17,23,2,5,2,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,64,Transient-Party,78.94,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,67.37,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,69.37,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,69.37,0
+Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,80.94,0
+Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,80.66,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,273.0,,0,Transient-Party,51.37,0
+Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,80.94,0
+Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,80.94,0
+Resort Hotel,253,April,17,23,2,5,2,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,78.94,0
+Resort Hotel,317,April,17,23,2,5,2,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,64,Transient-Party,78.94,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,Groups,TA/TO,0,0,0,A,No Deposit,273.0,,0,Transient-Party,51.37,0
+Resort Hotel,253,April,17,23,2,5,1,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,0,Transient-Party,67.37,0
+Resort Hotel,317,April,17,23,2,5,2,0.0,0,HB,Groups,TA/TO,0,0,0,D,No Deposit,273.0,,64,Transient-Party,80.94,0
+Resort Hotel,94,April,17,23,2,5,2,0.0,0,HB,Offline TA/TO,TA/TO,0,0,0,A,No Deposit,40.0,,0,Contract,70.95,0
+Resort Hotel,82,April,17,23,2,5,2,0.0,0,BB,Offline TA/TO,TA/TO,0,0,0,D,No Deposit,40.0,,0,Contract,52.85,0

@@ -1,0 +1,3 @@
+,rules,meet all three thresholds next year %,meet confidence + lift only %
+rules that passed the thresholds,598,58.9,85.3
+"baseline: near-miss rules (conf >= 0.25, lift >= 1.5)",516,11.8,

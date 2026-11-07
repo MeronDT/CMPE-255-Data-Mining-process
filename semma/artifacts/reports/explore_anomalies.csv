@@ -1,0 +1,5 @@
+anomaly,shots,share_%,FG%
+LOC_Y > 400 (beyond half court),251,0.21,0.036
+LOC_Y < -7.5 (behind the backboard),2105,1.75,0.428
+SHOT_DISTANCE > 40 ft,262,0.22,0.034
+zone = Backcourt,229,0.19,0.026

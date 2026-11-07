@@ -1,0 +1,6 @@
+segmentation,groups,AUC_active_next_year,spearman_next_year_revenue
+"K-means on log-RFM (k=4, the project's segments)",4.0,0.739,0.575
+Alternative: K-means on recency + one volume factor,4.0,0.745,0.574
+"RFM score (sum of R, F, M percentile ranks), quartiles",4.0,0.765,0.601
+Monetary tertiles,3.0,0.729,0.586
+"RFM score, continuous (upper bound for a score)",,0.783,0.628

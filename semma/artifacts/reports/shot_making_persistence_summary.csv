@@ -1,0 +1,4 @@
+measure,r,ci_95_low,ci_95_high
+FG_over_expected,0.7,0.6,0.78
+FG_pct,0.86,0.81,0.9
+xFG_pct,0.94,0.92,0.96

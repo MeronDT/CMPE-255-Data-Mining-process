@@ -1,5 +1,7 @@
-strategy,net_value_eur_per_1000,bookings_flagged_%
-Status quo (no model),0.0,0.0
-Flag every booking,-18251.7,100.0
-"Model, threshold 0.50",17028.8,26.7
-"Model, threshold 0.34",19655.4,36.2
+strategy,net_value_eur_per_1000,bookings_flagged_%,precision,recall
+Status quo (no model),0.0,0.0,0.0,0.0
+Flag every booking,-38688.8,100.0,0.409,1.0
+Rule: flag Non Refund deposits,4807.733,9.628,1.0,0.235
+Logistic regression (threshold 0.95),4782.517,9.565,1.0,0.234
+"Random Forest, threshold 0.50",4393.78,32.263,0.757,0.598
+"Random Forest, threshold 0.67",5719.689,23.152,0.831,0.471

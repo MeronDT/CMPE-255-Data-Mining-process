@@ -1,0 +1,3 @@
+test bookings,bookings,cancel_rate,median_lead_time,roc_auc,precision,recall
+booked before the cut-off,16370,0.47,166,0.8401,0.8419,0.5551
+booked after the cut-off,7425,0.274,19,0.7602,0.7087,0.1521

@@ -1,5 +1,5 @@
 {
-  "created": "2026-11-03T18:31:45",
+  "created": "2026-11-06T22:52:44",
   "k": 4,
   "segment_features": [
     "recency_days",
@@ -7,82 +7,91 @@
     "monetary"
   ],
   "snapshot": "2011-12-10",
+  "window": "2010-12-10 .. 2011-12-09 (12 months)",
   "segments": {
     "S1": {
-      "name": "S1 \u00b7 Champions (active \u00b7 frequent \u00b7 high-spend)",
+      "name": "S1 \u00b7 Champions (active 85% \u00b7 frequent 98% \u00b7 high-spend 96%)",
       "action": "Protect: account manager or VIP tier, early access to new ranges, never discount by default."
     },
     "S2": {
-      "name": "S2 \u00b7 Loyal but cooling (cooling \u00b7 repeat \u00b7 high-spend)",
-      "action": "Re-engage: personalised reminder with best-selling reorders; small loyalty incentive if no order in 60 days."
+      "name": "S2 \u00b7 Loyal but cooling (cooling 60% \u00b7 repeat 67% \u00b7 high-spend 55%)",
+      "action": "Re-engage: personalised reminder with best-selling reorders; small loyalty incentive once 90 days pass without an order."
     },
     "S3": {
-      "name": "S3 \u00b7 New customers (active \u00b7 repeat \u00b7 mid-spend \u00b7 new)",
+      "name": "S3 \u00b7 New customers (active 83% \u00b7 repeat 63% \u00b7 mid-spend 57% \u00b7 new 56%)",
       "action": "Develop: onboarding emails, cross-sell from the association rules, second-order incentive."
     },
     "S4": {
-      "name": "S4 \u00b7 Lapsed one-off buyers (lapsed \u00b7 one-off \u00b7 low-spend)",
+      "name": "S4 \u00b7 Lapsed one-off buyers (lapsed 70% \u00b7 one-off 75% \u00b7 low-spend 74%)",
       "action": "Low-cost win-back only (seasonal newsletter before Q4); do not spend on paid retargeting."
     }
   },
   "cluster_to_segment": {
-    "0": "S4",
-    "1": "S1",
-    "2": "S2",
-    "3": "S3"
+    "2": "S1",
+    "0": "S2",
+    "3": "S3",
+    "1": "S4"
   },
   "profiles": [
     {
       "segment": "S1",
-      "customers": 726,
+      "customers": 682,
       "recency_days": 8.0,
-      "frequency": 9.0,
-      "monetary": 3447.2,
-      "avg_basket_value": 353.08,
-      "tenure_days": 350.0,
-      "return_rate": 0.03,
-      "revenue_share_%": 63.9,
-      "customer_share_%": 17.2,
-      "profile": "active \u00b7 frequent \u00b7 high-spend"
+      "frequency": 10.0,
+      "monetary": 3570.09,
+      "avg_basket_value": 362.30266233766235,
+      "tenure_days": 326.0,
+      "return_rate": 0.009714412483065487,
+      "non_UK_share": 0.10850439882697947,
+      "basket_over_1000_share": 0.0689149560117302,
+      "revenue_share_%": 64.5,
+      "customer_share_%": 16.0,
+      "profile": "active 88% \u00b7 frequent 97% \u00b7 high-spend 97%"
     },
     {
       "segment": "S2",
-      "customers": 1193,
+      "customers": 1176,
       "recency_days": 57.0,
       "frequency": 4.0,
-      "monetary": 1293.03,
-      "avg_basket_value": 347.98,
-      "tenure_days": 280.0,
-      "return_rate": 0.03,
-      "revenue_share_%": 24.5,
-      "customer_share_%": 28.3,
-      "profile": "cooling \u00b7 repeat \u00b7 high-spend"
+      "monetary": 1268.0549999999998,
+      "avg_basket_value": 360.0586666666667,
+      "tenure_days": 268.0,
+      "return_rate": 0.007589953240869823,
+      "non_UK_share": 0.10884353741496598,
+      "basket_over_1000_share": 0.08078231292517007,
+      "revenue_share_%": 23.3,
+      "customer_share_%": 27.7,
+      "profile": "cooling 60% \u00b7 repeat 67% \u00b7 high-spend 52%"
     },
     {
       "segment": "S3",
-      "customers": 821,
-      "recency_days": 12.0,
+      "customers": 784,
+      "recency_days": 14.0,
       "frequency": 2.0,
-      "monetary": 492.36,
-      "avg_basket_value": 250.35,
-      "tenure_days": 57.0,
-      "return_rate": 0.02,
-      "revenue_share_%": 6.1,
-      "customer_share_%": 19.5,
-      "profile": "active \u00b7 repeat \u00b7 mid-spend \u00b7 new"
+      "monetary": 505.325,
+      "avg_basket_value": 231.08458333333334,
+      "tenure_days": 73.0,
+      "return_rate": 0.006158133427089443,
+      "non_UK_share": 0.08673469387755102,
+      "basket_over_1000_share": 0.01020408163265306,
+      "revenue_share_%": 5.9,
+      "customer_share_%": 18.4,
+      "profile": "active 80% \u00b7 repeat 67% \u00b7 mid-spend 55% \u00b7 new 56%"
     },
     {
       "segment": "S4",
-      "customers": 1478,
-      "recency_days": 166.0,
+      "customers": 1608,
+      "recency_days": 159.0,
       "frequency": 1.0,
-      "monetary": 259.38,
-      "avg_basket_value": 206.48,
-      "tenure_days": 200.5,
-      "return_rate": 0.03,
-      "revenue_share_%": 5.5,
-      "customer_share_%": 35.0,
-      "profile": "lapsed \u00b7 one-off \u00b7 low-spend"
+      "monetary": 268.835,
+      "avg_basket_value": 208.53750000000002,
+      "tenure_days": 196.0,
+      "return_rate": 0.00824525127483373,
+      "non_UK_share": 0.08519900497512438,
+      "basket_over_1000_share": 0.01554726368159204,
+      "revenue_share_%": 6.3,
+      "customer_share_%": 37.8,
+      "profile": "lapsed 68% \u00b7 one-off 77% \u00b7 low-spend 72%"
     }
   ],
   "versions": {

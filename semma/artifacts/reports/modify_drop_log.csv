@@ -9,8 +9,8 @@ PLAYER_ID,shooter identity - excluded by design (model measures shot quality)
 PLAYER_NAME,shooter identity - excluded by design
 TEAM_ID,team identity - excluded by design
 TEAM_NAME,team identity - excluded by design
-HTM,home team code
-VTM,visiting team code
+HTM,"home team code - home/away is context, but the app scores a shot without a game, so it is left out"
+VTM,visiting team code - see HTM
 SEASON,season label - unseen seasons at scoring time
 SHOT_ZONE_BASIC,derivable from LOC_X/LOC_Y - replaced by engineered geometry
 SHOT_ZONE_AREA,derivable from location

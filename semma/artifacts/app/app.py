@@ -13,7 +13,7 @@ st.set_page_config(page_title="NBA xFG%", page_icon="🏀")
 
 @st.cache_resource
 def load():
-    return joblib.load(HERE / "model.joblib"), json.loads((HERE / "model_metadata.json").read_text())
+    return joblib.load(HERE / "model.joblib"), json.loads((HERE / "model_metadata.json").read_text(encoding="utf-8"))
 
 model, meta = load()
 st.title("🏀 NBA expected field-goal %")
@@ -35,8 +35,9 @@ with shot:
         y_ft = st.slider("Feet out from the hoop", -4.0, 40.0, 15.0, 0.5)
         action = st.selectbox("Shot type", meta["actions"], index=0)
         period = st.selectbox("Period", [1, 2, 3, 4, 5], index=0, format_func=lambda p: f"Q{p}" if p <= 4 else "OT")
-        minutes = st.number_input("Minutes left in period", 0, 12 if period <= 4 else 5, 6)
-        seconds = st.number_input("Seconds", 0, 59, 0)
+        max_min = 12 if period <= 4 else 5
+        minutes = st.number_input("Minutes left in period", 0, max_min, min(6, max_min))
+        seconds = st.number_input("Seconds", 0, 59, 0) if minutes < max_min else 0
     raw = pd.DataFrame([{"LOC_X": x_ft * 10, "LOC_Y": y_ft * 10, "ACTION_TYPE": action, "PERIOD": period,
                          "MINUTES_REMAINING": minutes, "SECONDS_REMAINING": seconds}])
     feats = engineer(raw).iloc[0]
@@ -50,10 +51,14 @@ with shot:
     c1.metric("Expected FG%", f"{xfg:.1%}")
     c2.metric("Shot value", f"{value} pts" + (" (corner)" if feats["is_corner_three"] else ""))
     c3.metric("Expected points", f"{xfg * value:.2f}")
-    st.caption(f"Distance {feats['dist_ft']:.1f} ft · angle {feats['angle_deg']:.0f}°")
+    st.caption(f"Distance {feats['dist_ft']:.1f} ft · {feats['abs_angle']:.0f}° from straight-on · shot family: {feats['action_family']}")
+    n_support = meta["support"].get(f"{feats['action_family']}|{feats['distance_bin']}", 0)
+    if n_support < 30:
+        st.warning(f"Unusual shot: only {n_support} training shots of this family at this distance - treat the estimate with caution.")
 with board:
     lb = pd.read_csv(HERE / "leaderboard.csv")
     st.write("Players with 500+ attempts. **Points over expected** = actual points from field goals minus the points "
-             "an average shooter would score on the same shots.")
-    st.dataframe(lb[["PLAYER_NAME", "team", "FGA", "FG_pct", "xFG_pct", "FG_over_expected", "points_over_expected"]],
-                 hide_index=True)
+             "an average shooter would score on the same shots. The 95 % interval shows how much of the gap could be luck; "
+             "**shrunk** pulls noisy estimates towards zero.")
+    st.dataframe(lb[["PLAYER_NAME", "team", "FGA", "FG_pct", "xFG_pct", "FG_over_expected", "ci_95_low", "ci_95_high",
+                     "FGOE_shrunk", "points_over_expected"]], hide_index=True)

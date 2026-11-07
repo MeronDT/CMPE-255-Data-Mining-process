@@ -10,23 +10,26 @@
 
 | Step | Enterprise Miner nodes | In this project |
 |---|---|---|
-| **Sample** | Input Data · Sample · Data Partition | 200k stratified sample proven representative (KS p = 0.999); size justified by a learning curve; 60/20/20 partition **grouped by game** |
-| **Explore** | StatExplore · MultiPlot · Variable Selection · Cluster | shot charts, FG% by distance/type/clock, mutual-information variable worth, location clusters; caught `EVENT_TYPE` = target leakage |
-| **Modify** | Drop · Transform · Replacement · Binning · Impute | engineered geometry (distance, angle, corner three, 3PT flag), clock flags, distance bins — written as reusable score code (`shot_features.py`) |
-| **Model** | Regression · Decision Tree · Neural Network · Gradient Boosting · Ensemble | five models vs a zone-average baseline, tuned on the validation partition |
-| **Assess** | Model Comparison · Cutoff · Score · Segment Profile | champion chosen by log loss; test + unseen-season check; decile calibration; player shot-making leaderboard |
+| **Sample** | Input Data · Sample · Data Partition | 200k stratified sample, tested against the unsampled remainder on unstratified variables; size justified by a learning curve to 480k shots; 60/20/20 partition **grouped by game** |
+| **Explore** | StatExplore · MultiPlot · Variable Selection · Cluster | shot charts, FG% by distance/type/clock, anomalies, bias-corrected variable worth, location clusters; caught `EVENT_TYPE` = target leakage |
+| **Modify** | Drop · Transform · Replacement · Binning · Impute | engineered geometry (distance, angle, corner three, 3PT flag), shot families for rare shot types, fine distance bins at the rim, heave flag — written as reusable score code (`shot_features.py`) that keeps missing values for the Impute step |
+| **Model** | Regression · Decision Tree · Neural Network · Gradient Boosting · Ensemble | five models, each tuned on the validation partition, vs three baselines; champion chosen with a game-level bootstrap |
+| **Assess** | Model Comparison · Cutoff · Score · Segment Profile | test + unseen-season check; calibration by decile and by segment; player leaderboard with confidence intervals and shrinkage |
 
 ## Results
 
 | | Log loss | ROC-AUC | Mean xFG / actual FG |
 |---|---|---|---|
-| Zone-average baseline (validation) | 0.6572 | 0.634 | — |
-| **Gradient boosting** (validation) | **0.6346** | **0.665** | 46.9 % / 46.8 % |
-| Gradient boosting (test) | 0.6345 | 0.663 | 46.9 % / 46.4 % |
-| Gradient boosting (**unseen 2024-25**) | 0.6377 | 0.657 | 46.4 % / 46.7 % |
+| Zone-average baseline (validation) | 0.6573 | 0.634 | — |
+| Zone × shot-family baseline (validation) | 0.6454 | 0.647 | — |
+| **Gradient boosting** (validation) | **0.6338** | **0.666** | 46.9 % / 46.8 % |
+| Gradient boosting (test) | 0.6339 | 0.664 | 46.9 % / 46.4 % |
+| Gradient boosting (**unseen 2024-25**) | 0.6370 | 0.659 | 46.5 % / 46.7 % |
 
-- Calibrated within **0.9 percentage points** in every decile of the 2024-25 season.
-- Shot making over expected, 2024-25: **Jokić +323 points**, Durant +228, Gilgeous-Alexander +197, Curry +143 — and it is a repeatable skill (**r = 0.68** season to season).
+- **Calibration on 2024-25.** Within **1.5 percentage points** in every decile, and within 2.1 points for every shot zone and shot family except backcourt heaves. Layups are slightly under-predicted.
+- **Shot making over expected, 2024-25.** **Jokić +327 points** (95 % CI on FG over expected +8.5 to +13.6 points), Durant +226, Gilgeous-Alexander +196, Curry +139. 62 of 181 players are clearly different from zero.
+- **Persistence.** The gap persists from season to season (**r = 0.70**, CI 0.60–0.78, 131 players), but less than raw FG% (0.86). It is best read as shot-making plus context the model cannot see.
+- **The shot-type label.** Without the scorer's shot-type label the model loses most of its edge (log loss 0.6471, worse than the zone × shot-family baseline). Most of the gain depends on that label.
 
 ## Files
 
@@ -36,10 +39,10 @@
 | `report/` | the notebook as an HTML and PDF report |
 | `artifacts/figures/`, `artifacts/reports/` | every chart and table |
 | `artifacts/app/` | Streamlit app: score any shot + leaderboard (`app.py`, `shot_features.py`, model) |
-| `critiques/` | AI critic reviews and resulting changes |
-| `article/medium_article.md` | Medium article draft |
+| `critiques/` | three rounds of expert-critic reviews and the changes they led to |
+| `article/medium_article.md` | Medium article |
 | `video/video_script.md` | walkthrough video script |
 
 **App:** `<deployed URL>` · **Article:** `<Medium link>` · **Video:** `<YouTube link>`
 
-**SAS Enterprise Miner:** the notebook's appendix exports the exact modeling sample and lists the node-by-node steps to rebuild the flow (available through SAS OnDemand for Academics when the instructor registers the class).
+**SAS Enterprise Miner:** the notebook's appendix exports the exact modeling sample as three files with the game-grouped train / validate / test split, and the target-leak column removed, plus a 2024-25 scoring file. It lists the node-by-node steps to rebuild the flow, available through SAS OnDemand for Academics when the instructor registers the class.

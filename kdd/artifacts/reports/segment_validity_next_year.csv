@@ -1,5 +1,5 @@
-segment,customers,active_next_year_pct,median_next_year_revenue,total_next_year_revenue,share_of_next_year_revenue_%
-S1,726,96.0,2557.685,4488707.48,66.8
-S2,1193,73.9,574.07,1383995.18,20.6
-S3,821,65.8,256.44,485055.99,7.2
-S4,1478,39.9,0.0,362535.08,5.4
+segment,customers,active_next_year_pct,median_next_year_revenue,total_next_year_revenue,share_of_returning_customer_revenue_%,share_of_ALL_next_year_revenue_%
+S1,712,96.2,2492.955,4376339.69,66.4,46.7
+S2,1189,73.6,559.7,1366655.02,20.7,14.6
+S3,832,65.3,256.38,493525.72000000003,7.5,5.3
+S4,1497,39.8,0.0,358819.79,5.4,3.8

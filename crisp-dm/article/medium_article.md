@@ -1,110 +1,91 @@
 # Will This Guest Actually Show Up? Predicting Hotel Cancellations with CRISP-DM
 
-*How a 25-year-old process model kept a machine learning project honest: a cost model, a validation trap, and a leakage question only the business can answer.*
+*How a 25-year-old process model, and three rounds of tough critique, turned a "great classifier" into an honest overbooking forecast.*
 
-`<cover image: artifacts/figures/eda_rates_categorical.png>`
+![Cancellation rates by deposit type, segment, customer type and country](https://raw.githubusercontent.com/MeronDT/CMPE-255-Data-Mining-process/main/crisp-dm/artifacts/figures/eda_rates_categorical.png)
 
-Over two years, **37 % of all bookings** at two Portuguese hotels were cancelled — 42 % at the city hotel. Every late cancellation is a room that probably stays empty. The usual defence, overbooking by rule of thumb, has its own price: when more guests show up than expected, someone gets "walked" to another hotel.
+Over two years, **37 % of all bookings** at two Portuguese hotels were cancelled; 42 % at the city hotel. Hotels defend themselves by overbooking: selling more rooms than they have, using a rule of thumb like "about 40 % of tonight's bookings won't show". When the rule is too generous, a guest gets "walked" to another hotel. When it's too cautious, rooms stay empty.
 
-What if each booking came with a risk score the moment it was made?
+Could the bookings themselves tell us how many cancellations to expect, night by night?
 
-I built that model following **CRISP-DM** — the Cross-Industry Standard Process for Data Mining. Its six phases are well known. Less well known is that each phase has specific *tasks*, each with required *outputs*. Producing all of them is tedious, and it's exactly what stopped this project from fooling itself.
+I built that model following **CRISP-DM**, the Cross-Industry Standard Process for Data Mining. Its six phases are well known. Less well known is that each phase has specific *tasks*, each with required *outputs*. My first draft reported a classifier with ROC-AUC 0.87 worth "€19,700 per 1,000 bookings". The final version reports something more modest and more useful, and the path between the two is the real story.
 
-## Phase 1 — Business understanding: put a price on mistakes
+## Phase 1 — Business understanding: price the actual decision
 
 The data is public (António, de Almeida & Nunes, *Data in Brief*, 2019): **119,390 bookings** for a resort hotel and a city hotel, July 2015 – August 2017.
 
-Before touching the data, CRISP-DM asks for **business success criteria** and a **cost/benefit assessment**. The average booking is worth about **€358** (€101.8 per night × 3.43 nights). I assumed:
+CRISP-DM asks for **business success criteria** and a **cost/benefit assessment** before touching the data. Two lessons came from getting this wrong first:
 
-- catching a cancellation in time (deposit request, re-selling the room) is worth **+€100**;
-- wrongly flagging a guest who then shows up, and overbooking against them, costs **−€100** (a replacement room, a taxi, an annoyed guest);
-- missing a cancellation costs €0 extra — that's today's situation.
+- **Price the outcomes consistently.** A room you overbook is only re-sold, and a guest is only walked, if the hotel actually fills up that night. I first applied that 50 % chance to the walk cost but not to the re-sale. Done consistently, a correct call is worth €50 and a wrong one costs €100: a 2 : 1 ratio, not 1 : 1.
+- **Compare with what the hotel does today.** My first benchmark was "flag every booking", which loses money by construction. The real incumbent is the rule of thumb: the historical cancellation rate × the bookings on the books.
 
-The model criteria were fixed up front too: **ROC-AUC ≥ 0.85**, and **precision ≥ 0.75**, because if most flags are wrong, staff will stop reading them.
+The goals were also stated as **data mining criteria** for a per-booking classifier: ROC-AUC ≥ 0.85, precision ≥ 0.75 and recall ≥ 0.50.
 
-## Phase 2 — Data understanding: two surprises
+## Phase 2 — Data understanding: the field that knew the future
 
-The data came as two files with inconsistent formats: "NULL" stored as text, padded strings, a column that was an integer in one file and a decimal in the other. Fixing that was routine. Two findings were not.
+The data came as two files with inconsistent formats ("NULL" as text, padded strings, mismatched types). Routine to fix. Three findings were not:
 
-**Surprise 1: non-refundable deposits cancel 99.4 % of the time.** That's the opposite of what a non-refundable deposit should do. Profiling those 14,587 bookings showed they're 97 % Portuguese, 97 % group or tour-operator bookings, with zero special requests and a 183-day median lead time. These look like **block allocations released by tour operators**, not individual guests losing their money. It's a data-quality question for the hotel, not a behavioural insight.
+**Non-refundable deposits cancel 99.4 % of the time.** That's the opposite of what a non-refundable deposit should do. The 14,587 bookings are 97 % group or tour-operator bookings, and **98 % of them are exact duplicate rows**. They look like block allocations released by tour operators, not guests losing their money.
 
-**Surprise 2: some columns know the future.** A small leakage detector flagged attributes where a large group of bookings has a near-certain outcome. `reservation_status` literally contains "Canceled". The parking column is more subtle: **none** of the 7,416 bookings that requested parking were cancelled, which means parking is almost certainly recorded on arrival. Both were excluded. The rule for every column was a single question: *is this known when the booking is made?*
+**Some columns are recorded after the fact.** `reservation_status` literally says "Canceled". None of the 7,416 bookings with a parking space were cancelled, so parking is recorded on arrival. Both were excluded.
 
-Otherwise the expected patterns showed up. Cancellation rises steadily with lead time, from 10 % for last-week bookings to 68 % for bookings made more than a year ahead. Groups and online travel agents cancel most; direct and corporate bookings least.
+**Nationality was the biggest trap.** `country` was the model's single most important input: 62 % of cancelled bookings are Portuguese, against 28 % of arrived ones. A reviewer asked whether nationality might be filled in by default and only corrected at check-in. The data can test that. Within each market segment, bookings that **never reached the front desk**, both cancellations *and* no-shows, are Portuguese far more often than bookings that checked out. Among group bookings it is 97 % and 97 % against 29 %. A real nationality effect wouldn't make no-shows look like cancellations and unlike arrivals in the same segment. A default value would. So `country` was **excluded**, like parking. On a validation block, adding it back is worth 0.034 AUC: that's how much the leak had been flattering the model.
 
-`<image: eda_month_leadtime.png>`
+![Cancellation rate by arrival month and by lead time](https://raw.githubusercontent.com/MeronDT/CMPE-255-Data-Mining-process/main/crisp-dm/artifacts/figures/eda_month_leadtime.png)
 
-## Phase 3 — Data preparation: duplicates and a time-based split
+## Phase 3 — Data preparation: score code and a time-based split
 
-Roughly 27 % of rows are exact duplicates. With no booking ID, there's no way to prove they're errors. Identical rows are plausibly separate rooms in one group booking, so I kept them. That decision came back to bite in Phase 4.
+About 27 % of rows are exact duplicates. With no booking ID they can't be proven to be errors, and profiling showed they're mostly multi-room group bookings, so I kept them. That decision came back in Phase 4.
 
-The data was split **by time**: everything arriving before 23 April 2017 for training, the latest 20 % of arrivals (23,795 bookings) for the final test. A model used in production always predicts bookings that arrive *after* the data it learned from, so the test should mimic that.
+The feature construction is written as **score code**: a small module the model pipeline calls first, so the app accepts the 24 raw fields a booking system exports.
+
+The data was split **by time**. Everything arriving before 23 April 2017 is for training, and the latest 20 % of arrivals (23,795 bookings) form the test period. A deployed model always predicts bookings that arrive *after* the data it learned from.
 
 ## Phase 4 — Modeling: the validation trap
 
-I compared a majority-class baseline, logistic regression, a random forest and gradient boosting.
+My first version used shuffled 5-fold cross-validation: ROC-AUC **0.956**. On the later test period: **0.868**. Shuffled folds mix future bookings into training, and identical duplicate rows land on both sides of a fold, so the model is rewarded for recognising bookings it has already seen. Switching to **time-series cross-validation**, with fold edges on date boundaries, made validation predict reality.
 
-My first version used ordinary shuffled 5-fold cross-validation. The random forest scored **ROC-AUC 0.956**, which looked excellent. On the later test period it scored **0.868**.
+Three baselines kept the comparison honest:
+- a majority-class floor;
+- lead time alone;
+- the simplest business rule, "flag every Non Refund booking" (precision 0.99, recall 0.33).
 
-That 0.09 gap is the story of this project. Shuffled folds mix future bookings into training, and the duplicate rows land on both sides of a fold, so the model is rewarded for recognising bookings it has already seen. Neither happens in real use.
+Logistic regression, a random forest and gradient boosting each got the same tuning budget. Without nationality, the **random forest** came out best (cross-validated AUC 0.844), ahead on 4–5 of 5 folds.
 
-Switching to **time-series cross-validation**, where each fold trains on earlier arrivals and validates on the next block, gave:
+## Phase 5 — Evaluation: the classifier fails, the forecast succeeds
 
-| Model | Time-series CV ROC-AUC |
-|---|---|
-| **Random forest** | **0.877** |
-| Gradient boosting | 0.870 |
-| Logistic regression | 0.861 |
-| Majority class | 0.500 |
+As a **per-booking classifier**, the honest model misses two of its three targets:
+- test ROC-AUC **0.827** (target 0.85);
+- recall **0.47** (target 0.50) at the cost-optimal threshold;
+- precision **0.83** (target 0.75), the only one met.
 
-Now validation (0.877) predicts the test result (0.868). I'd only have caught this by holding out a genuinely later test period.
+Outside the Non Refund blocks it's weaker still (precision 0.71). Telling individual guests apart is hard once the leak is gone.
 
-## Phase 5 — Evaluation: business value, not just accuracy
+But the hotel doesn't decide per booking. It decides **how many extra rooms to sell each night**. Missed cancellations and false alarms on the same night cancel out. So I added up the calibrated probabilities of each night's bookings into an *expected number of cancellations*, and simulated every policy over the 262 hotel-nights of the test period:
 
-A random forest outputs a probability, and someone has to choose the cut-off. Using the cost model from Phase 1 on *training* data only, the best threshold was **0.34**, not the default 0.5.
+- **The current rule of thumb:** €13,429 per 1,000 bookings, off by 9.4 rooms per night on average.
+- **Counting the model's flagged bookings:** €11,538. Worse than today's rule.
+- **The model's expected cancellations:** **€16,804**, off by **4.6 rooms per night**.
 
-On the untouched test period:
+That is **€3,400 more per 1,000 bookings than the hotel's current rule** (95 % CI €2,400–€4,300). The confidence interval is entirely above zero.
 
-| | Target | Result |
-|---|---|---|
-| ROC-AUC | ≥ 0.85 | **0.868** ✅ |
-| Precision | ≥ 0.75 | **0.772** ✅ |
-| Recall | — | 0.683 |
+![Test-period confusion matrix, ROC, precision–recall and calibration](https://raw.githubusercontent.com/MeronDT/CMPE-255-Data-Mining-process/main/crisp-dm/artifacts/figures/eval_test_performance.png)
 
-In business terms, the model is worth about **€19,700 per 1,000 bookings** compared with doing nothing. The naive 0.5 threshold gives €17,000, and "flag every booking" *loses* €18,300. The city hotel is easier to predict than the resort (ROC-AUC 0.88 vs 0.86; recall 0.73 vs 0.55).
-
-The strongest drivers are country, deposit type, travel agent, number of special requests and lead time.
-
-### The question the data can't answer
-
-Country is the single most important feature. It's also suspicious: 62 % of cancelled bookings are Portuguese, against 28 % of arrived ones. If a guest's nationality is only confirmed at check-in, cancelled bookings keep a default value, and the model is partly reading the outcome.
-
-So I ran a sensitivity test, again on training data only:
-
-| Attribute set | ROC-AUC (last training block) |
-|---|---|
-| Approved set | 0.897 |
-| Without country | 0.862 |
-| Without country, agent and special requests | 0.833 |
-| *Plus* the excluded parking column | 0.905 |
-
-Removing country costs 0.035. Adding back parking, which I'd excluded as leaky, would gain less than 0.01, so excluding it was cheap.
-
-CRISP-DM's answer is a **decision**, not more modeling: approve the model *on the condition* that the hotel confirms when country is recorded. If it turns out to be corrected at check-in, the no-country version is the fallback.
+CRISP-DM's answer is a **decision**, not more tuning. The model is approved for the nightly overbooking forecast, as a randomised pilot. Individual flags are not approved for decisions; they are a watch list.
 
 ## Phase 6 — Deployment and monitoring
 
-The approved model is deployed as a Streamlit app. Staff can score a single booking or upload the day's bookings as a CSV and get each booking's cancellation probability and a flag. A typical booking scores about 54 %. A non-refundable booking made 300 days ahead scores 94 %. `<app link>`
+The Streamlit app takes the day's booking file in the hotel's own format. It returns, per hotel and arrival date, the recommended number of extra rooms to sell, and it warns about category values it has never seen. Guests are never contacted on the basis of the score, and nationality isn't an input. `<app link>`
 
-The monitoring plan uses the **Population Stability Index**. One lesson from the demo: seasonal attributes look massively "drifted" when you compare a spring–summer test period with all-season training data. In production, compare each month with the same month last year, and watch the drift of the predicted scores themselves (PSI 0.118 here, a moderate shift).
+The pilot is randomised by arrival date: on half of the dates the model sets the overbooking level, on the other half the current rule does. Monitoring uses the Population Stability Index, compares each month with the same month last year, and has responses that don't need outcomes (which only arrive after the stay).
 
-## What CRISP-DM actually bought me
+## What CRISP-DM, and its critics, bought me
 
-- **The cost model** turned a threshold into a business decision worth ~15 % more than the default.
-- **The "known at booking time?" rule** removed two leaky columns and exposed a third risk.
-- **The evaluation and review tasks** forced me to ask whether the validation mimicked real use. It didn't, and fixing it moved the reported performance from fantasy (0.956) to reality (0.868).
+- **Pricing the real decision** turned a failing classifier into a forecast that beats the incumbent, and showed that the per-booking flags were the wrong tool.
+- **"Is this known at booking time?"**, asked of every column and then *tested*, removed the most predictive field, because it was leaking the answer.
+- **Honest validation** moved the reported AUC from 0.956 (shuffled), to 0.868 (time-ordered), to 0.827 (without the leak). Each step down was a step closer to what the hotel would actually get.
 
-The phases sound bureaucratic. In practice, each required output is a question you'd otherwise skip.
+Three rounds of independent expert critique did most of the catching: corrupted figures, a one-sided cost model, a missing incumbent benchmark, and the untested nationality leak. The phases sound bureaucratic. In practice, each required output is a question you'd otherwise skip.
 
 *Code, notebook, figures, report and app: [github.com/MeronDT/CMPE-255-Data-Mining-process](https://github.com/MeronDT/CMPE-255-Data-Mining-process). Video walkthrough: `<YouTube link>`.*
 

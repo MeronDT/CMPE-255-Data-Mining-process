@@ -11,7 +11,7 @@ adults,include,"known at booking time, potentially predictive"
 children,include,"known at booking time, potentially predictive"
 babies,include,"known at booking time, potentially predictive"
 meal,include,"known at booking time, potentially predictive"
-country,include,"known at booking time, potentially predictive"
+country,exclude,probably defaulted to Portugal for bookings that never reached check-in (2.3 test) - leaks the outcome; sensitivity in 5.2
 market_segment,include,"known at booking time, potentially predictive"
 distribution_channel,include,"known at booking time, potentially predictive"
 is_repeated_guest,include,"known at booking time, potentially predictive"
@@ -21,13 +21,13 @@ reserved_room_type,include,"known at booking time, potentially predictive"
 assigned_room_type,exclude,assigned at check-in - not known at booking time
 booking_changes,exclude,accumulates after the booking is made - unknown at prediction time
 deposit_type,include,"known at booking time, potentially predictive"
-agent,exclude,replaced by categorical agent_id (3.3)
-company,exclude,94 % missing - replaced by has_company flag (3.3)
+agent,include,kept as the categorical agent_id (3.3)
+company,include,94 % missing - kept as the has_company flag (3.3)
 days_in_waiting_list,include,"known at booking time, potentially predictive"
 customer_type,include,"known at booking time, potentially predictive"
-adr,include,"known at booking time, potentially predictive"
+adr,include,AMBIGUOUS (can be revised at checkout); kept; sensitivity in 5.2 shows no dependence
 required_car_parking_spaces,exclude,no cancellations among bookings with parking - likely recorded at arrival
-total_of_special_requests,include,"known at booking time, potentially predictive"
+total_of_special_requests,include,AMBIGUOUS recording time (can be added after booking); kept; sensitivity in 5.2
 reservation_status,exclude,encodes the outcome (Canceled / No-Show / Check-Out) - target leakage
 reservation_status_date,exclude,date the outcome was recorded - known only after the fact
 arrival_date,exclude,used only to order bookings for the time-based split

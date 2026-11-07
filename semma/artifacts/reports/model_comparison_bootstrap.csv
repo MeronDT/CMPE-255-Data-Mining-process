@@ -1,0 +1,10 @@
+model,log_loss_minus_champion,ci_95_low,ci_95_high,clearly_worse
+Ensemble,0.00013,-0.00027,0.00052,False
+Ablation: boosting without the shot angle,0.00015,-0.00014,0.00042,False
+Neural Network,0.0013,0.0006,0.00202,True
+Regression,0.00195,0.0012,0.0027,True
+Decision Tree,0.00333,0.00209,0.00495,True
+Baseline: zone x shot family,0.0116,0.01,0.0131,True
+"Ablation: boosting, location + clock only (no shot type)",0.01323,0.0118,0.01471,True
+Baseline: zone average,0.02343,0.02144,0.02527,True
+Baseline: base rate,0.0572,0.05425,0.06003,True

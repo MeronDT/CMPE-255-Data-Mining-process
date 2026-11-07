@@ -1,6 +1,9 @@
-,population,sample,KS p-value
-shots,1031740.0,199999.0,
-FG%,0.4677,0.4677,
-mean distance (ft),13.5687,13.5769,0.999
-3PT share,0.3917,0.3926,
-overtime share,0.006,0.0059,
+variable,sample,remainder,test,p_value
+FG% (stratum - matches by design),0.4677,0.4677,-,
+shot distance (mean ft),13.5769,13.5667,KS,0.9897
+LOC_X (mean),-1.6838,-1.957,KS,0.4519
+3PT share,0.3926,0.3915,chi-square,0.3725
+ACTION_TYPE mix (top 20 + other),,,chi-square,0.8468
+SHOT_ZONE_BASIC mix,,,chi-square,0.6956
+SHOT_ZONE_AREA mix,,,chi-square,0.5748
+overtime share,0.0059,0.006,chi-square,0.8573

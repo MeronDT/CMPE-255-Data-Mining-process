@@ -3,5 +3,9 @@ Exact duplicate rows,31994
 Bookings with 0 guests (adults+children+babies),180
 Negative ADR,1
 "ADR > 1,000 EUR",1
+ADR = 0 outside the Complementary segment,1279
 Bookings with 0 nights,715
+Stays longer than 30 nights,24
+More than 10 adults on one booking,12
+9 or more children or babies on one booking,3
 Meal = 'Undefined' (same as 'SC' per data paper),1169

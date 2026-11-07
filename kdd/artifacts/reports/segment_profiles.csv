@@ -1,5 +1,5 @@
-segment,customers,recency_days,frequency,monetary,avg_basket_value,tenure_days,return_rate,revenue,revenue_share_%,customer_share_%,profile
-S1,726,8.0,9.0,3447.2,353.08,350.0,0.03,5132963.11,63.9,17.2,active · frequent · high-spend
-S2,1193,57.0,4.0,1293.03,347.98,280.0,0.03,1964390.35,24.5,28.3,cooling · repeat · high-spend
-S3,821,12.0,2.0,492.36,250.35,57.0,0.02,487668.71,6.1,19.5,active · repeat · mid-spend · new
-S4,1478,166.0,1.0,259.38,206.48,200.5,0.03,442211.64,5.5,35.0,lapsed · one-off · low-spend
+segment,customers,recency_days,frequency,monetary,avg_basket_value,tenure_days,return_rate,non_UK_share,basket_over_1000_share,revenue,revenue_share_%,customer_share_%,profile
+S1,712,8.0,9.0,3536.125,354.918,350.0,0.011,0.063,0.063,5224875.39,63.9,16.8,active 85% · frequent 98% · high-spend 96%
+S2,1189,57.0,4.0,1310.34,346.49,280.0,0.011,0.092,0.084,1992190.85,24.4,28.1,cooling 60% · repeat 67% · high-spend 55%
+S3,832,12.0,2.0,506.345,253.69,60.0,0.006,0.073,0.022,513461.64,6.3,19.7,active 83% · repeat 63% · mid-spend 57% · new 56%
+S4,1497,165.0,1.0,261.0,207.04,197.0,0.01,0.071,0.007,450734.63,5.5,35.4,lapsed 70% · one-off 75% · low-spend 74%

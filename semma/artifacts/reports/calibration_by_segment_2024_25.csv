@@ -1,0 +1,20 @@
+segment_by,segment,shots,mean_xFG,actual_FG,gap_pct_points
+SHOT_ZONE_BASIC,Above the Break 3,68359,0.362,0.353,-0.921
+SHOT_ZONE_BASIC,Backcourt,517,0.072,0.023,-4.893
+SHOT_ZONE_BASIC,In The Paint (Non-RA),44475,0.432,0.444,1.133
+SHOT_ZONE_BASIC,Left Corner 3,12188,0.383,0.386,0.323
+SHOT_ZONE_BASIC,Mid-Range,21401,0.421,0.417,-0.351
+SHOT_ZONE_BASIC,Restricted Area,61190,0.653,0.664,1.1
+SHOT_ZONE_BASIC,Right Corner 3,11397,0.382,0.39,0.802
+SHOT_TYPE,2PT Field Goal,127072,0.536,0.545,0.865
+SHOT_TYPE,3PT Field Goal,92455,0.366,0.36,-0.564
+family,alley-oop,1001,0.636,0.647,1.104
+family,bank shot,992,0.521,0.51,-1.103
+family,dunk,13379,0.874,0.882,0.779
+family,fadeaway/turnaround,9439,0.422,0.415,-0.755
+family,floater,20798,0.453,0.445,-0.825
+family,hook,6017,0.48,0.481,0.137
+family,jump shot,69886,0.371,0.375,0.37
+family,layup,48253,0.545,0.565,2.056
+family,pull-up/step-back,41206,0.386,0.374,-1.173
+family,tip/putback,8556,0.552,0.545,-0.694
