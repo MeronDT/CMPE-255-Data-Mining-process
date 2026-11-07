@@ -1,0 +1,10 @@
+# large raw / derived data: re-created by running the notebooks
+**/artifacts/data/
+*.tar.xz
+*.xlsx
+*.pkl
+# python / notebooks
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.DS_Store

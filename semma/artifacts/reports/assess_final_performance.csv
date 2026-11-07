@@ -1,0 +1,4 @@
+,log_loss,brier,roc_auc,accuracy,baseline_log_loss,mean_xFG,actual_FG
+validate (2019-24 sample),0.6346,0.2229,0.6646,0.6355,0.6572,0.4691,0.4675
+test (2019-24 sample),0.6345,0.2231,0.6626,0.6329,0.6583,0.4686,0.4639
+"out-of-time (2024-25, all 219,527 shots)",0.6377,0.2244,0.6574,0.63,0.6577,0.4643,0.4672

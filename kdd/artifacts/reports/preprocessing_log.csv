@@ -1,0 +1,6 @@
+action,lines_removed,lines_left
+Separate cancellation lines (invoice starts with 'C'),19494,1047877
+Remove purchases matched by a later cancellation,13653,1034224
+"Remove non-product codes (postage, fees, manual adjustments, tests)",4320,1029904
+Remove lines with quantity <= 0 or price <= 0,6111,1023793
+Remove exact duplicate lines,33203,990590

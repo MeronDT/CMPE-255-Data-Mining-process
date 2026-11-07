@@ -1,0 +1,6 @@
+check,passed
+rows: resort + city = integrated,True
+rows: integrated = published combined,True
+columns match published combined,True
+cancellations match,True
+total ADR matches (rounded),True

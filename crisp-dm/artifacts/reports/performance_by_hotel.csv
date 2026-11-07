@@ -1,0 +1,3 @@
+hotel,bookings,cancel_rate,roc_auc,precision,recall
+Resort Hotel,7459,0.357,0.8589,0.754,0.5506
+City Hotel,16336,0.432,0.8799,0.777,0.7326

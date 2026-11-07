@@ -1,0 +1,7 @@
+,roc_auc,precision,recall,delta_auc
+approved attribute set,0.8966,0.761,0.7238,0.0
+without country,0.862,0.7427,0.6676,-0.0346
+without total_of_special_requests,0.8804,0.6669,0.782,-0.0162
+"without country, agent_id, total_of_special_requests",0.8329,0.6247,0.7629,-0.0637
++ required_car_parking_spaces (excluded),0.9051,0.7661,0.7512,0.0085
++ booking_changes (excluded),0.8995,0.7681,0.7366,0.0029

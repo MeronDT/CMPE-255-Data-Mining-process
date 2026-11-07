@@ -1,0 +1,5 @@
+strategy,net_value_eur_per_1000,bookings_flagged_%
+Status quo (no model),0.0,0.0
+Flag every booking,-18251.7,100.0
+"Model, threshold 0.50",17028.8,26.7
+"Model, threshold 0.34",19655.4,36.2

@@ -1,0 +1,19 @@
+variable,reason
+EVENT_TYPE,duplicates the target (Made/Missed Shot) - leakage
+GRID_TYPE,constant
+SHOT_ATTEMPTED_FLAG,constant (every row is an attempt)
+GAME_ID,identifier (used only for partitioning)
+GAME_EVENT_ID,identifier
+GAME_DATE,time index - would not generalise to new seasons
+PLAYER_ID,shooter identity - excluded by design (model measures shot quality)
+PLAYER_NAME,shooter identity - excluded by design
+TEAM_ID,team identity - excluded by design
+TEAM_NAME,team identity - excluded by design
+HTM,home team code
+VTM,visiting team code
+SEASON,season label - unseen seasons at scoring time
+SHOT_ZONE_BASIC,derivable from LOC_X/LOC_Y - replaced by engineered geometry
+SHOT_ZONE_AREA,derivable from location
+SHOT_ZONE_RANGE,derivable from location
+SHOT_DISTANCE,integer-rounded; replaced by exact distance from LOC_X/LOC_Y
+SHOT_TYPE,2PT/3PT - recomputed from court geometry so the app needs only a location

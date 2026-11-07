@@ -1,0 +1,496 @@
+{
+  "project_name": "Hotel Booking Cancellation Risk",
+  "created": "2026-11-03T18:28:41",
+  "target": "is_canceled",
+  "model_type": "Random Forest",
+  "parameters": {
+    "n_estimators": "200",
+    "min_samples_leaf": "20",
+    "max_features": "sqrt",
+    "max_depth": "25"
+  },
+  "decision_threshold": 0.34,
+  "test_metrics": {
+    "roc_auc": 0.8676,
+    "pr_auc": 0.826,
+    "precision": 0.7718,
+    "recall": 0.6827,
+    "f1": 0.7245,
+    "accuracy": 0.7878
+  },
+  "features": [
+    {
+      "name": "hotel",
+      "type": "categorical",
+      "default": "City Hotel",
+      "categories": [
+        "City Hotel",
+        "Resort Hotel"
+      ],
+      "meaning": "Resort Hotel (H1) or City Hotel (H2)"
+    },
+    {
+      "name": "lead_time",
+      "type": "numeric",
+      "integer": true,
+      "default": 69.0,
+      "min": 0.0,
+      "max": 737.0,
+      "meaning": "days between booking and arrival"
+    },
+    {
+      "name": "arrival_date_month",
+      "type": "categorical",
+      "default": "August",
+      "categories": [
+        "August",
+        "July",
+        "May",
+        "October",
+        "April",
+        "June",
+        "September",
+        "March",
+        "February",
+        "November",
+        "December",
+        "January"
+      ],
+      "meaning": "arrival month"
+    },
+    {
+      "name": "arrival_date_week_number",
+      "type": "numeric",
+      "integer": true,
+      "default": 28.0,
+      "min": 1.0,
+      "max": 53.0,
+      "meaning": "arrival ISO week"
+    },
+    {
+      "name": "arrival_date_day_of_month",
+      "type": "numeric",
+      "integer": true,
+      "default": 16.0,
+      "min": 1.0,
+      "max": 31.0,
+      "meaning": "arrival day"
+    },
+    {
+      "name": "stays_in_weekend_nights",
+      "type": "numeric",
+      "integer": true,
+      "default": 1.0,
+      "min": 0.0,
+      "max": 19.0,
+      "meaning": "Sat/Sun nights booked"
+    },
+    {
+      "name": "stays_in_week_nights",
+      "type": "numeric",
+      "integer": true,
+      "default": 2.0,
+      "min": 0.0,
+      "max": 50.0,
+      "meaning": "Mon\u2013Fri nights booked"
+    },
+    {
+      "name": "adults",
+      "type": "numeric",
+      "integer": true,
+      "default": 2.0,
+      "min": 0.0,
+      "max": 55.0,
+      "meaning": "number of adults"
+    },
+    {
+      "name": "children",
+      "type": "numeric",
+      "integer": true,
+      "default": 0.0,
+      "min": 0.0,
+      "max": 10.0,
+      "meaning": "number of children"
+    },
+    {
+      "name": "babies",
+      "type": "numeric",
+      "integer": true,
+      "default": 0.0,
+      "min": 0.0,
+      "max": 10.0,
+      "meaning": "number of babies"
+    },
+    {
+      "name": "meal",
+      "type": "categorical",
+      "default": "BB",
+      "categories": [
+        "BB",
+        "HB",
+        "SC",
+        "FB"
+      ],
+      "meaning": "meal package (BB, HB, FB, SC/Undefined = none)"
+    },
+    {
+      "name": "country",
+      "type": "categorical",
+      "default": "PRT",
+      "categories": [
+        "PRT",
+        "GBR",
+        "FRA",
+        "ESP",
+        "DEU",
+        "ITA",
+        "IRL",
+        "BEL",
+        "BRA",
+        "NLD",
+        "USA",
+        "CHE",
+        "CN",
+        "AUT",
+        "SWE",
+        "CHN",
+        "POL",
+        "ISR",
+        "RUS",
+        "NOR",
+        "ROU",
+        "missing",
+        "FIN",
+        "DNK",
+        "AUS",
+        "AGO",
+        "LUX",
+        "MAR",
+        "TUR",
+        "HUN",
+        "ARG",
+        "JPN",
+        "CZE",
+        "IND",
+        "KOR",
+        "GRC",
+        "DZA",
+        "SRB",
+        "HRV",
+        "MEX",
+        "EST",
+        "IRN",
+        "LTU",
+        "ZAF",
+        "BGR",
+        "NZL",
+        "COL",
+        "UKR",
+        "MOZ",
+        "CHL",
+        "SVK",
+        "THA",
+        "ISL",
+        "SVN",
+        "LVA",
+        "TWN",
+        "ARE",
+        "CYP",
+        "SAU",
+        "PHL"
+      ],
+      "meaning": "country of origin (ISO 3166-1 alpha-3)"
+    },
+    {
+      "name": "market_segment",
+      "type": "categorical",
+      "default": "Online TA",
+      "categories": [
+        "Online TA",
+        "Offline TA/TO",
+        "Groups",
+        "Direct",
+        "Corporate",
+        "Complementary",
+        "Aviation",
+        "Undefined"
+      ],
+      "meaning": "market segment (TA = travel agent, TO = tour operator)"
+    },
+    {
+      "name": "distribution_channel",
+      "type": "categorical",
+      "default": "TA/TO",
+      "categories": [
+        "TA/TO",
+        "Direct",
+        "Corporate",
+        "GDS",
+        "Undefined"
+      ],
+      "meaning": "booking distribution channel"
+    },
+    {
+      "name": "is_repeated_guest",
+      "type": "numeric",
+      "integer": true,
+      "default": 0.0,
+      "min": 0.0,
+      "max": 1.0,
+      "meaning": "1 if guest stayed before"
+    },
+    {
+      "name": "previous_cancellations",
+      "type": "numeric",
+      "integer": true,
+      "default": 0.0,
+      "min": 0.0,
+      "max": 26.0,
+      "meaning": "prior bookings cancelled by this customer"
+    },
+    {
+      "name": "previous_bookings_not_canceled",
+      "type": "numeric",
+      "integer": true,
+      "default": 0.0,
+      "min": 0.0,
+      "max": 72.0,
+      "meaning": "prior bookings not cancelled"
+    },
+    {
+      "name": "reserved_room_type",
+      "type": "categorical",
+      "default": "A",
+      "categories": [
+        "A",
+        "D",
+        "E",
+        "F",
+        "G",
+        "B",
+        "C",
+        "H",
+        "L"
+      ],
+      "meaning": "room type reserved (code)"
+    },
+    {
+      "name": "deposit_type",
+      "type": "categorical",
+      "default": "No Deposit",
+      "categories": [
+        "No Deposit",
+        "Non Refund",
+        "Refundable"
+      ],
+      "meaning": "No Deposit / Non Refund / Refundable"
+    },
+    {
+      "name": "days_in_waiting_list",
+      "type": "numeric",
+      "integer": true,
+      "default": 0.0,
+      "min": 0.0,
+      "max": 391.0,
+      "meaning": "days on waiting list before confirmation"
+    },
+    {
+      "name": "customer_type",
+      "type": "categorical",
+      "default": "Transient",
+      "categories": [
+        "Transient",
+        "Transient-Party",
+        "Contract",
+        "Group"
+      ],
+      "meaning": "Transient, Contract, Group, Transient-Party"
+    },
+    {
+      "name": "adr",
+      "type": "numeric",
+      "integer": false,
+      "default": 94.95,
+      "min": 0.0,
+      "max": 510.0,
+      "meaning": "average daily rate (EUR)"
+    },
+    {
+      "name": "total_of_special_requests",
+      "type": "numeric",
+      "integer": true,
+      "default": 0.0,
+      "min": 0.0,
+      "max": 5.0,
+      "meaning": "special requests made"
+    },
+    {
+      "name": "arrival_weekday",
+      "type": "categorical",
+      "default": "Friday",
+      "categories": [
+        "Friday",
+        "Thursday",
+        "Monday",
+        "Saturday",
+        "Wednesday",
+        "Sunday",
+        "Tuesday"
+      ],
+      "meaning": ""
+    },
+    {
+      "name": "total_nights",
+      "type": "numeric",
+      "integer": true,
+      "default": 3.0,
+      "min": 0.0,
+      "max": 69.0,
+      "meaning": ""
+    },
+    {
+      "name": "total_guests",
+      "type": "numeric",
+      "integer": true,
+      "default": 2.0,
+      "min": 1.0,
+      "max": 55.0,
+      "meaning": ""
+    },
+    {
+      "name": "has_kids",
+      "type": "numeric",
+      "integer": true,
+      "default": 0.0,
+      "min": 0.0,
+      "max": 1.0,
+      "meaning": ""
+    },
+    {
+      "name": "adr_per_guest",
+      "type": "numeric",
+      "integer": false,
+      "default": 49.5,
+      "min": 0.0,
+      "max": 510.0,
+      "meaning": ""
+    },
+    {
+      "name": "has_agent",
+      "type": "numeric",
+      "integer": true,
+      "default": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "meaning": ""
+    },
+    {
+      "name": "agent_id",
+      "type": "categorical",
+      "default": "9",
+      "categories": [
+        "9",
+        "none",
+        "240",
+        "1",
+        "14",
+        "7",
+        "6",
+        "250",
+        "241",
+        "28",
+        "8",
+        "3",
+        "37",
+        "19",
+        "40",
+        "314",
+        "21",
+        "229",
+        "242",
+        "83",
+        "29",
+        "171",
+        "12",
+        "85",
+        "20",
+        "96",
+        "243",
+        "30",
+        "134",
+        "298",
+        "27",
+        "15",
+        "26",
+        "11",
+        "22",
+        "56",
+        "273",
+        "177",
+        "86",
+        "58",
+        "5",
+        "119",
+        "196",
+        "34",
+        "44",
+        "138",
+        "315",
+        "38",
+        "10",
+        "236",
+        "16",
+        "17",
+        "115",
+        "251",
+        "42",
+        "68",
+        "191",
+        "175",
+        "195",
+        "154"
+      ],
+      "meaning": ""
+    },
+    {
+      "name": "has_company",
+      "type": "numeric",
+      "integer": true,
+      "default": 0.0,
+      "min": 0.0,
+      "max": 1.0,
+      "meaning": ""
+    },
+    {
+      "name": "room_type_x_hotel",
+      "type": "categorical",
+      "default": "C_A",
+      "categories": [
+        "C_A",
+        "R_A",
+        "C_D",
+        "R_D",
+        "R_E",
+        "C_F",
+        "R_G",
+        "C_E",
+        "C_B",
+        "R_F",
+        "R_C",
+        "R_H",
+        "C_G",
+        "C_C",
+        "R_L",
+        "R_B"
+      ],
+      "meaning": ""
+    }
+  ],
+  "training_rows": 119208,
+  "versions": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1"
+  }
+}

@@ -1,0 +1,7 @@
+,count
+Exact duplicate rows,31994
+Bookings with 0 guests (adults+children+babies),180
+Negative ADR,1
+"ADR > 1,000 EUR",1
+Bookings with 0 nights,715
+Meal = 'Undefined' (same as 'SC' per data paper),1169

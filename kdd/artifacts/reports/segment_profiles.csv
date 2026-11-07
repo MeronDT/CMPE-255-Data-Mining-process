@@ -1,0 +1,5 @@
+segment,customers,recency_days,frequency,monetary,avg_basket_value,tenure_days,return_rate,revenue,revenue_share_%,customer_share_%,profile
+S1,726,8.0,9.0,3447.2,353.08,350.0,0.03,5132963.11,63.9,17.2,active · frequent · high-spend
+S2,1193,57.0,4.0,1293.03,347.98,280.0,0.03,1964390.35,24.5,28.3,cooling · repeat · high-spend
+S3,821,12.0,2.0,492.36,250.35,57.0,0.02,487668.71,6.1,19.5,active · repeat · mid-spend · new
+S4,1478,166.0,1.0,259.38,206.48,200.5,0.03,442211.64,5.5,35.0,lapsed · one-off · low-spend

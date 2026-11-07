@@ -1,0 +1,33 @@
+,meaning,dtype,missing_%,n_unique,example
+hotel,Resort Hotel (H1) or City Hotel (H2),str,0.0,2,Resort Hotel
+is_canceled,TARGET: 1 if cancelled (incl. no-show),int64,0.0,2,0
+lead_time,days between booking and arrival,int64,0.0,479,342
+arrival_date_year,arrival year,int64,0.0,3,2015
+arrival_date_month,arrival month,str,0.0,12,July
+arrival_date_week_number,arrival ISO week,int64,0.0,53,27
+arrival_date_day_of_month,arrival day,int64,0.0,31,1
+stays_in_weekend_nights,Sat/Sun nights booked,int64,0.0,17,0
+stays_in_week_nights,Mon–Fri nights booked,int64,0.0,35,0
+adults,number of adults,int64,0.0,14,2
+children,number of children,float64,0.0,5,0.0
+babies,number of babies,int64,0.0,5,0
+meal,"meal package (BB, HB, FB, SC/Undefined = none)",str,0.0,5,BB
+country,country of origin (ISO 3166-1 alpha-3),str,0.41,177,PRT
+market_segment,"market segment (TA = travel agent, TO = tour operator)",str,0.0,8,Direct
+distribution_channel,booking distribution channel,str,0.0,5,Direct
+is_repeated_guest,1 if guest stayed before,int64,0.0,2,0
+previous_cancellations,prior bookings cancelled by this customer,int64,0.0,15,0
+previous_bookings_not_canceled,prior bookings not cancelled,int64,0.0,73,0
+reserved_room_type,room type reserved (code),str,0.0,10,C
+assigned_room_type,room type assigned at check-in (code),str,0.0,12,C
+booking_changes,changes made to the booking until check-in/cancellation,int64,0.0,21,3
+deposit_type,No Deposit / Non Refund / Refundable,str,0.0,3,No Deposit
+agent,ID of travel agency (missing = none),float64,13.69,333,304.0
+company,ID of company paying (missing = none),float64,94.31,352,110.0
+days_in_waiting_list,days on waiting list before confirmation,int64,0.0,128,0
+customer_type,"Transient, Contract, Group, Transient-Party",str,0.0,4,Transient
+adr,average daily rate (EUR),float64,0.0,8879,0.0
+required_car_parking_spaces,parking spaces requested,int64,0.0,5,0
+total_of_special_requests,special requests made,int64,0.0,6,0
+reservation_status,"last status: Canceled, Check-Out, No-Show",str,0.0,3,Check-Out
+reservation_status_date,date the last status was set,str,0.0,926,2015-07-01

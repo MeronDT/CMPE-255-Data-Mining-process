@@ -1,0 +1,6 @@
+action,rows_before,rows_after,affected
+Drop bookings with 0 guests,119390,119210,180
+"Drop ADR < 0 or > 1,000 EUR",119210,119208,2
+Meal 'Undefined' -> 'SC' (both = no meal package),119208,119208,1169
+Missing country -> 'missing',119208,119208,478
+Duplicates KEPT (no booking ID; likely group bookings),119208,119208,31980
