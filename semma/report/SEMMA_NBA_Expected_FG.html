@@ -8401,6 +8401,7 @@ a.anchor-link {
 <li>the mix of shot types (<code>ACTION_TYPE</code>, p = 0.85) and of court zones (p = 0.70 and 0.57).</li>
 </ul>
 <p>Because the sampling is <em>proportional</em>, the base rate is not distorted, which matters because the model must output real probabilities. Per-stratum rounding gives 199,999 shots instead of 200,000.</p>
+<h2 id="S.3-Data-Partition">S.3 Data Partition<a class="anchor-link" href="#S.3-Data-Partition">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9103,6 +9104,7 @@ EVENT_TYPE vs target:
 <li>2,105 shots (1.75 %) have <code>LOC_Y</code> below the hoop line. They are baseline shots under and behind the rim (FG 42.8 %), also real.</li>
 <li>Only 2 of the 48 <code>ACTION_TYPE</code> labels are missing from some season (0.12 % of shots), so the label set is stable across seasons. <code>ACTION_TYPE</code> is assigned by the scorer after the play, so a missed dunk <em>could</em> be logged as a layup. Whether that happens cannot be checked without video, but its <em>consequence</em> can be measured: A.1 fits the champion without the shot-type label.</li>
 </ul>
+<h2 id="E.2-MultiPlot-/-Graph-Explore">E.2 MultiPlot / Graph Explore<a class="anchor-link" href="#E.2-MultiPlot-/-Graph-Explore">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9571,6 +9573,7 @@ EVENT_TYPE vs target:
 <li>Game-clock fields carry almost nothing on their own (≤ 0.0002) but matter in one situation, end-of-quarter heaves (E.2).</li>
 <li>Distance is represented several overlapping ways (distance, zone, range, location). Modify replaces them with one consistent geometry.</li>
 </ul>
+<h2 id="E.4-Cluster-(shot-location-segments)">E.4 Cluster (shot-location segments)<a class="anchor-link" href="#E.4-Cluster-(shot-location-segments)">¶</a></h2>
 </div>
 </div>
 </div>
@@ -12090,6 +12093,7 @@ Probe xFG from the boosting model: {'missing location, clock and shot type': np.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>xFG% is used as a probability, so no single cutoff is required. The table shows what labels would mean: shots rated ≥ 60 % go in 77 % of the time (17.8 % of shots), and ≥ 70 % go in 84 % of the time — "high-quality shot" labels are reliable.</p>
+<h2 id="A.3-Final-check-on-untouched-data-%E2%80%94-test-partition-and-the-unseen-2024-25-season">A.3 Final check on untouched data — test partition and the unseen 2024-25 season<a class="anchor-link" href="#A.3-Final-check-on-untouched-data-%E2%80%94-test-partition-and-the-unseen-2024-25-season">¶</a></h2>
 </div>
 </div>
 </div>
@@ -12591,6 +12595,7 @@ Probe xFG from the boosting model: {'missing location, clock and shot type': np.
 </ul>
 <p>The three success criteria are met.</p>
 <p><em>Process note: the test partition and the 2024-25 season were never used to fit or choose anything. But their results were visible in every review round while the analysis was revised (rim bins, shot families, extra baselines). "Unseen" therefore holds for training, not for model development. The effect is likely small, because test still equals validation.</em></p>
+<h2 id="A.4-Score-&amp;-Segment-Profile-%E2%80%94-shot-making-over-expected-(2024-25)">A.4 Score &amp; Segment Profile — shot-making over expected (2024-25)<a class="anchor-link" href="#A.4-Score-&amp;-Segment-Profile-%E2%80%94-shot-making-over-expected-(2024-25)">¶</a></h2>
 </div>
 </div>
 </div>
