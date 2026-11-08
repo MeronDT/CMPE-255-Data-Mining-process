@@ -5,7 +5,7 @@ Each segment has **SHOW** (what is on screen and what to click) and **SAY** (nar
 ## Before you record
 
 - The repo is **public** (the Colab badge and the article images need it).
-- The Streamlit app is deployed (entry point `kdd/artifacts/app/app.py`, Python 3.13).
+- The app is awake: open https://cmpe-255-data-mining-process-retail-segments.streamlit.app/ a few minutes before you start (free apps sleep when nobody has used them for a while).
 - Open three browser tabs:
   1. the notebook in Colab (README → *Open in Colab*);
   2. the GitHub repo at `kdd/`;

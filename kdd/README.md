@@ -44,4 +44,4 @@
 | `article/medium_article.md` | Medium article |
 | `video/video_script.md` | walkthrough video script |
 
-**App:** `<deployed URL>` · **Article:** `<Medium link>` · **Video:** `<YouTube link>`
+**App:** [cmpe-255-data-mining-process-retail-segments.streamlit.app](https://cmpe-255-data-mining-process-retail-segments.streamlit.app/) · **Article:** `<Medium link>` · **Video:** `<YouTube link>`

@@ -55,4 +55,4 @@ Top drivers: deposit type, special requests, lead time, travel agent, customer t
 | `article/medium_article.md` | Medium article |
 | `video/video_script.md` | walkthrough video script |
 
-**App:** `<deployed URL>` · **Article:** `<Medium link>` · **Video:** `<YouTube link>`
+**App:** [cmpe-255-data-mining-process-hotel-cancellations.streamlit.app](https://cmpe-255-data-mining-process-hotel-cancellations.streamlit.app/) · **Article:** `<Medium link>` · **Video:** `<YouTube link>`

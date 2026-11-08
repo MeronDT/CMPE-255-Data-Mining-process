@@ -4,9 +4,9 @@ One end-to-end project for each classic data mining process model — **CRISP-DM
 
 | Methodology | Project | Dataset | Mining task | Deployed app |
 |---|---|---|---|---|
-| [CRISP-DM](crisp-dm/) | Predicting hotel booking cancellations | Hotel Booking Demand (António, de Almeida & Nunes, 2019) — 119,390 bookings | Classification | `<Streamlit URL>` |
-| [SEMMA](semma/) | NBA expected field-goal % (shot quality) | NBA shot-chart detail 2019-20 → 2024-25 — 1.25 M shots | Probability estimation | `<Streamlit URL>` |
-| [KDD](kdd/) | Customer segments & product associations | UCI Online Retail II — 1,044,848 distinct transaction lines | Clustering + association rules | `<Streamlit URL>` |
+| [CRISP-DM](crisp-dm/) | Predicting hotel booking cancellations | Hotel Booking Demand (António, de Almeida & Nunes, 2019) — 119,390 bookings | Classification | [cmpe-255-data-mining-process-hotel-cancellations.streamlit.app](https://cmpe-255-data-mining-process-hotel-cancellations.streamlit.app/) |
+| [SEMMA](semma/) | NBA expected field-goal % (shot quality) | NBA shot-chart detail 2019-20 → 2024-25 — 1.25 M shots | Probability estimation | [cmpe-255-data-mining-process-nba-expected-fg.streamlit.app](https://cmpe-255-data-mining-process-nba-expected-fg.streamlit.app/) |
+| [KDD](kdd/) | Customer segments & product associations | UCI Online Retail II — 1,044,848 distinct transaction lines | Clustering + association rules | [cmpe-255-data-mining-process-retail-segments.streamlit.app](https://cmpe-255-data-mining-process-retail-segments.streamlit.app/) |
 
 ## Results at a glance
 

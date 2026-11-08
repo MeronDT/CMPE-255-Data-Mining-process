@@ -5,7 +5,7 @@ Each segment has **SHOW** (what is on screen and what to click) and **SAY** (nar
 ## Before you record
 
 - The repo is **public** (the Colab badge and the article images need it).
-- The Streamlit app is deployed (entry point `crisp-dm/artifacts/app/app.py`, Python 3.13), and you have `crisp-dm/artifacts/app/sample_bookings.csv` downloaded.
+- The app is awake: open https://cmpe-255-data-mining-process-hotel-cancellations.streamlit.app/ a few minutes before you start (free apps sleep when nobody has used them for a while), and you have `crisp-dm/artifacts/app/sample_bookings.csv` downloaded.
 - Open three browser tabs:
   1. the notebook in Colab (README → *Open in Colab*);
   2. the GitHub repo at `crisp-dm/`;

@@ -43,6 +43,6 @@
 | `article/medium_article.md` | Medium article |
 | `video/video_script.md` | walkthrough video script |
 
-**App:** `<deployed URL>` · **Article:** `<Medium link>` · **Video:** `<YouTube link>`
+**App:** [cmpe-255-data-mining-process-nba-expected-fg.streamlit.app](https://cmpe-255-data-mining-process-nba-expected-fg.streamlit.app/) · **Article:** `<Medium link>` · **Video:** `<YouTube link>`
 
 **SAS Enterprise Miner:** the notebook's appendix exports the exact modeling sample as three files with the game-grouped train / validate / test split, and the target-leak column removed, plus a 2024-25 scoring file. It lists the node-by-node steps to rebuild the flow, available through SAS OnDemand for Academics when the instructor registers the class.

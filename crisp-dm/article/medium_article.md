@@ -75,7 +75,7 @@ CRISP-DM's answer is a **decision**, not more tuning. The model is approved for 
 
 ## Phase 6 — Deployment and monitoring
 
-The Streamlit app takes the day's booking file in the hotel's own format. It returns, per hotel and arrival date, the recommended number of extra rooms to sell, and it warns about category values it has never seen. Guests are never contacted on the basis of the score, and nationality isn't an input. `<app link>`
+The Streamlit app takes the day's booking file in the hotel's own format. It returns, per hotel and arrival date, the recommended number of extra rooms to sell, and it warns about category values it has never seen. Guests are never contacted on the basis of the score, and nationality isn't an input. [Try the app](https://cmpe-255-data-mining-process-hotel-cancellations.streamlit.app/).
 
 The pilot is randomised by arrival date: on half of the dates the model sets the overbooking level, on the other half the current rule does. Monitoring uses the Population Stability Index, compares each month with the same month last year, and has responses that don't need outcomes (which only arrive after the stay).
 

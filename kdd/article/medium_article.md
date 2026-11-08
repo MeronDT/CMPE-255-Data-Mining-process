@@ -86,7 +86,7 @@ Every one of these was fixed and the notebook re-run. The final version reports 
 KDD's last step is to act. The app ships **the validated model**: the same 12-month segmenter, applied to each customer's most recent 12 months. A check confirms that every segment still matches its name. Staff can:
 - enter a whole basket and get the validated recommendations (rules fire only when all their "if" products are present);
 - look up a customer's segment, action and RFM score;
-- export a segment's customer list for a campaign. `<app link>`
+- export a segment's customer list for a campaign. [Try the app](https://cmpe-255-data-mining-process-retail-segments.streamlit.app/).
 
 Segments and rules should be re-mined quarterly on a rolling 12-month window, and each version validated on the following year, just as in this notebook.
 

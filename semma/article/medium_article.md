@@ -91,7 +91,7 @@ That 131 used to be 124. One reviewer found I had matched seasons by *name*, and
 
 ## Deployment (beyond SEMMA)
 
-SEMMA stops at Assess, so I added a small Streamlit app. You pick a spot on the court, a shot type and the clock, and it returns xFG% and expected points. It warns you when you ask about a shot the model has barely seen, like a dunk from 25 feet. A second tab shows the full leaderboard with intervals. `<app link>`
+SEMMA stops at Assess, so I added a small Streamlit app. You pick a spot on the court, a shot type and the clock, and it returns xFG% and expected points. It warns you when you ask about a shot the model has barely seen, like a dunk from 25 feet. A second tab shows the full leaderboard with intervals. [Try the app](https://cmpe-255-data-mining-process-nba-expected-fg.streamlit.app/).
 
 ## What SEMMA got right, and what the critics added
 
