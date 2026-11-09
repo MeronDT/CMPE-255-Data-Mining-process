@@ -55,4 +55,4 @@ Top drivers: deposit type, special requests, lead time, travel agent, customer t
 | `article/medium_article.md` | Medium article |
 | `video/video_script.md` | walkthrough video script |
 
-**App:** [cmpe-255-data-mining-process-hotel-cancellations.streamlit.app](https://cmpe-255-data-mining-process-hotel-cancellations.streamlit.app/) · **Article:** `<Medium link>` · **Video:** `<YouTube link>`
+**App:** [cmpe-255-data-mining-process-hotel-cancellations.streamlit.app](https://cmpe-255-data-mining-process-hotel-cancellations.streamlit.app/) · **Article:** [Medium article](https://medium.com/@meron.tesfandrias/will-this-guest-actually-show-up-predicting-hotel-cancellations-with-crisp-dm-2a9d65772e8f) · **Video:** `<YouTube link>`

@@ -2,11 +2,11 @@
 
 One end-to-end project for each classic data mining process model — **CRISP-DM**, **SEMMA** and **KDD** — each on a different real dataset, each taken all the way to a deployed app.
 
-| Methodology | Project | Dataset | Mining task | Deployed app |
-|---|---|---|---|---|
-| [CRISP-DM](crisp-dm/) | Predicting hotel booking cancellations | Hotel Booking Demand (António, de Almeida & Nunes, 2019) — 119,390 bookings | Classification | [cmpe-255-data-mining-process-hotel-cancellations.streamlit.app](https://cmpe-255-data-mining-process-hotel-cancellations.streamlit.app/) |
-| [SEMMA](semma/) | NBA expected field-goal % (shot quality) | NBA shot-chart detail 2019-20 → 2024-25 — 1.25 M shots | Probability estimation | [cmpe-255-data-mining-process-nba-expected-fg.streamlit.app](https://cmpe-255-data-mining-process-nba-expected-fg.streamlit.app/) |
-| [KDD](kdd/) | Customer segments & product associations | UCI Online Retail II — 1,044,848 distinct transaction lines | Clustering + association rules | [cmpe-255-data-mining-process-retail-segments.streamlit.app](https://cmpe-255-data-mining-process-retail-segments.streamlit.app/) |
+| Methodology | Project | Dataset | Mining task | Deployed app | Article |
+|---|---|---|---|---|---|
+| [CRISP-DM](crisp-dm/) | Predicting hotel booking cancellations | Hotel Booking Demand (António, de Almeida & Nunes, 2019) — 119,390 bookings | Classification | [cmpe-255-data-mining-process-hotel-cancellations.streamlit.app](https://cmpe-255-data-mining-process-hotel-cancellations.streamlit.app/) | [Medium](https://medium.com/@meron.tesfandrias/will-this-guest-actually-show-up-predicting-hotel-cancellations-with-crisp-dm-2a9d65772e8f) |
+| [SEMMA](semma/) | NBA expected field-goal % (shot quality) | NBA shot-chart detail 2019-20 → 2024-25 — 1.25 M shots | Probability estimation | [cmpe-255-data-mining-process-nba-expected-fg.streamlit.app](https://cmpe-255-data-mining-process-nba-expected-fg.streamlit.app/) | [Medium](https://medium.com/@meron.tesfandrias/what-is-a-shot-actually-worth-building-an-nba-expected-fg-model-with-semma-c5a514833c04) |
+| [KDD](kdd/) | Customer segments & product associations | UCI Online Retail II — 1,044,848 distinct transaction lines | Clustering + association rules | [cmpe-255-data-mining-process-retail-segments.streamlit.app](https://cmpe-255-data-mining-process-retail-segments.streamlit.app/) | [Medium](https://medium.com/@meron.tesfandrias/from-a-million-receipts-to-knowledge-a-kdd-walkthrough-on-online-retail-data-cc0093504b3e) |
 
 ## Results at a glance
 
