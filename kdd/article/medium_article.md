@@ -94,6 +94,6 @@ Segments and rules should be re-mined quarterly on a rolling 12-month window, an
 
 Compared with CRISP-DM's business focus and SEMMA's modeling focus, KDD's distinctive contribution is its definition of **knowledge**. Testing each criterion separately is what exposed that my segments don't beat an RFM score, that most "novel" rules are unstable, and that the honest validity figure is 59 %, not 86 %. That made the final list of claims shorter, and every claim on it was tested.
 
-*Code, notebook, figures and app: [github.com/MeronDT/CMPE-255-Data-Mining-process](https://github.com/MeronDT/CMPE-255-Data-Mining-process). Video walkthrough: `<YouTube link>`.*
+*Code, notebook, figures and app: [github.com/MeronDT/CMPE-255-Data-Mining-process](https://github.com/MeronDT/CMPE-255-Data-Mining-process).*
 
 *AI disclosure: built with help from Claude (Anthropic) for code, drafting and expert critique; all results were produced by running the code.*

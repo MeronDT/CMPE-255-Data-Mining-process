@@ -87,6 +87,6 @@ The pilot is randomised by arrival date: on half of the dates the model sets the
 
 Three rounds of independent expert critique did most of the catching: corrupted figures, a one-sided cost model, a missing incumbent benchmark, and the untested nationality leak. The phases sound bureaucratic. In practice, each required output is a question you'd otherwise skip.
 
-*Code, notebook, figures, report and app: [github.com/MeronDT/CMPE-255-Data-Mining-process](https://github.com/MeronDT/CMPE-255-Data-Mining-process). Video walkthrough: `<YouTube link>`.*
+*Code, notebook, figures, report and app: [github.com/MeronDT/CMPE-255-Data-Mining-process](https://github.com/MeronDT/CMPE-255-Data-Mining-process).*
 
 *AI disclosure: built with help from Claude (Anthropic) for code, drafting and expert critique; all results were produced by running the code.*

@@ -106,6 +106,6 @@ None of those would have shown up in the accuracy numbers.
 
 **Limitations:** no defender distance or tracking data; shot-type labels assigned after the play; the test season's results were visible while I revised the analysis.
 
-*Code, notebook, figures and app: [github.com/MeronDT/CMPE-255-Data-Mining-process](https://github.com/MeronDT/CMPE-255-Data-Mining-process). Video walkthrough: `<YouTube link>`.*
+*Code, notebook, figures and app: [github.com/MeronDT/CMPE-255-Data-Mining-process](https://github.com/MeronDT/CMPE-255-Data-Mining-process).*
 
 *AI disclosure: built with help from Claude (Anthropic) for code, drafting and expert critique; all results were produced by running the code.*

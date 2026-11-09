@@ -122,11 +122,9 @@ Each segment has **SHOW** (what is on screen and what to click) and **SAY** (nar
    - `artifacts/reports/` (a CSV per table, e.g. `model_comparison_validation.csv`, `shot_making_leaderboard_2024_25.csv`);
    - `artifacts/app/` (`app.py`, `shot_features.py`, `model.joblib`, `model_metadata.json`, `leaderboard.csv`, `requirements.txt`);
    - then `critiques/`, `report/`, `article/`.
-2. Optionally the **Appendix — SAS Enterprise Miner demo** heading.
+2. Scroll to the **Appendix — SAS Enterprise Miner demo** heading in the notebook.
 
 **SAY:**
 > All the artifacts are in the repo: every chart under figures, every table as a CSV under reports, and the app folder with the model, the score-code module, the leaderboard and pinned requirements.
 >
-> SEMMA is a disciplined technical core. It made me justify the sample, compare model families fairly on a validation partition, and check calibration, not just accuracy. Its blind spots are the parts it never claimed to cover: the question at the start and deployment at the end. The critiques caught what accuracy numbers never show: a corrupted chart, a shot grouping that lumped dunks with bank shots, an overclaimed "skill" result, and the name-matching bug. The limitations are no defender data, and shot-type labels assigned after the play. The appendix has the files and steps to rebuild this in SAS Enterprise Miner. Everything, including the reports and the Medium article, is in this repo. Thanks for watching.
-
-**Optional SAS segment (+3 min, only if you have Enterprise Miner):** follow the notebook appendix with the exported role files and compare its Model Comparison result with section A.1.
+> SEMMA is a disciplined technical core. It made me justify the sample, compare model families fairly on a validation partition, and check calibration, not just accuracy. Its blind spots are the parts it never claimed to cover: the question at the start and deployment at the end. The critiques caught what accuracy numbers never show: a corrupted chart, a shot grouping that lumped dunks with bank shots, an overclaimed "skill" result, and the name-matching bug. The limitations are no defender data, and shot-type labels assigned after the play. SAS Enterprise Miner wasn't available to me, so each step here mirrors its Enterprise Miner node, and the appendix has the files and steps to rebuild it in SAS. Everything, including the reports and the Medium article, is in this repo. Thanks for watching.
