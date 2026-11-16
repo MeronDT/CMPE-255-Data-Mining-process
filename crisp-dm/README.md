@@ -53,6 +53,5 @@ Top drivers: deposit type, special requests, lead time, travel agent, customer t
 | `artifacts/app/` | Streamlit app (`app.py`, score code `booking_features.py`, model, `sample_bookings.csv` for batch testing) |
 | `critiques/` | three rounds of expert-critic reviews and the changes they led to |
 | `article/medium_article.md` | Medium article |
-| `video/video_script.md` | walkthrough video script |
 
 **App:** [cmpe-255-data-mining-process-hotel-cancellations.streamlit.app](https://cmpe-255-data-mining-process-hotel-cancellations.streamlit.app/) · **Article:** [Medium article](https://medium.com/@meron.tesfandrias/will-this-guest-actually-show-up-predicting-hotel-cancellations-with-crisp-dm-2a9d65772e8f) · **Video:** [YouTube walkthrough](https://www.youtube.com/watch?v=bZYBAZsZWfc)

@@ -41,7 +41,6 @@
 | `artifacts/app/` | Streamlit app: score any shot + leaderboard (`app.py`, `shot_features.py`, model) |
 | `critiques/` | three rounds of expert-critic reviews and the changes they led to |
 | `article/medium_article.md` | Medium article |
-| `video/video_script.md` | walkthrough video script |
 
 **App:** [cmpe-255-data-mining-process-nba-expected-fg.streamlit.app](https://cmpe-255-data-mining-process-nba-expected-fg.streamlit.app/) · **Article:** [Medium article](https://medium.com/@meron.tesfandrias/what-is-a-shot-actually-worth-building-an-nba-expected-fg-model-with-semma-c5a514833c04) · **Video:** [YouTube walkthrough](https://www.youtube.com/watch?v=YGN7ini5bI8)
 

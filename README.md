@@ -40,8 +40,7 @@ The three are compared in detail by Azevedo & Santos (2008), *KDD, SEMMA and CRI
 │   ├── reports/          # every table produced by the notebook (CSV)
 │   └── app/              # the deployable Streamlit app (app.py + model + requirements.txt)
 ├── critiques/            # three rounds of expert-critic reviews (round_1-3.md) and the responses to them
-├── article/              # Medium article draft
-└── video/                # walkthrough video script
+└── article/              # the Medium article as Markdown (published version linked in the table above)
 ```
 
 ## Running the projects
